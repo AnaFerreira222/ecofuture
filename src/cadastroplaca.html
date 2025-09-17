@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFuture - Energia Limpa e Sustentável</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/header.css">
+</head>
+<body>
+
+    <!-- Cabeçalho com navegação -->
+    <header class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+    <!-- Logo da empresa -->
+    <a class="navbar-brand fw-bold" href="index.html">
+    <i class="fas fa-solar-panel me-2"></i>EcoFuture
+    </a>
+    
+    <!-- Botão para menu mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Menu de navegação -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sobre.html">Sobre Nós</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="serviços.html">Serviços</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+    </header>
+
+<!-- Seção de cadastro -->
+<section id="cadastro" class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="section-title">Realize o cadastro da sua placa</h2>
+          <p class="section-subtitle">Informações totalmente confidenciais</p>
+        </div>
+      </div>
+  
+      <div class="row justify-content-center">
+        <div class="col-lg-6"> <!-- largura centralizada -->
+          <form id="contact-form" class="contact-form" novalidate>
+            
+            <!-- Potência da placa -->
+  <div class="mb-3">
+    <label for="potencia" class="form-label">Potência da placa (Wp)</label>
+    <input type="number" class="form-control" id="potencia" name="potencia" placeholder="Ex: 450">
+  </div>
+
+  <!-- Ano de instalação -->
+  <div class="mb-3">
+    <label for="ano" class="form-label">Ano de instalação</label>
+    <input type="number" class="form-control" id="ano" name="ano" placeholder="Ex: 2023">
+  </div>
+
+  <!-- Orientação -->
+  <div class="mb-3">
+    <label for="orientacao" class="form-label">Orientação da placa</label>
+    <select id="orientacao" name="orientacao" class="form-select">
+      <option value="">Selecione</option>
+      <option value="Norte">Norte</option>
+      <option value="Sul">Sul</option>
+      <option value="Leste">Leste</option>
+      <option value="Oeste">Oeste</option>
+    </select>
+  </div>
+
+  <!-- Eficiência -->
+  <div class="mb-3">
+    <label for="eficiencia" class="form-label">Eficiência média da placa (%)</label>
+    <input type="number" class="form-control" id="eficiencia" name="eficiencia" step="0.1" placeholder="Ex: 18.5">
+  </div>
+  
+            <!-- Botão e links centralizados -->
+            <div class="text-center mt-4">
+                    <a href="monitora.html" class="btn btn-success btn-lg">
+                        <i class="me-2"></i>Concluir
+                    </a>
+                </br>
+            </br>
+                <a href="cadastroresi.html" class="link-secondary voltar">← Voltar</a>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Rodapé -->
+ <footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h5><i class="fas fa-solar-panel me-2"></i>EcoFuture</h5>
+                <p class="mb-0">Energia limpa para um futuro sustentável</p>
+            </div>
+            <div class="col-lg-6 text-lg-end">
+                <p class="mb-0">&copy; 2025 EcoFuture. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>

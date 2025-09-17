@@ -1,0 +1,370 @@
+/* ==== ESTILOS GERAIS ==== */
+
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 80px; /* Espaço para header fixo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cores personalizadas */
+:root {
+    --primary-green: #2d5a27;
+    --secondary-green: #4a7c59;
+    --light-green: #90ee90;
+    --accent-green: #a8d5a8;
+    --dark-green: #1a3d1a;
+}
+
+/* ==== SEÇÃO HERO ==== */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de partículas no fundo */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+    radial-gradient(circle at 20% 80%, rgba(144, 238, 144, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(168, 213, 168, 0.1) 0%, transparent 50%);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Imagem Ratoplaca na hero section */
+.ratoplaca-image {
+    max-width: 80%;
+    height: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    animation: fadeInRight 1s ease-out;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 20px rgba(144, 238, 144, 0.3));
+}
+
+.ratoplaca-image:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 30px rgba(144, 238, 144, 0.5));
+}
+
+@keyframes fadeInRight {
+    from {
+    opacity: 0;
+    transform: translateX(50px);
+    }
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+/* Ícone principal da hero section */
+.hero-icon {
+    font-size: 15rem;
+    color: var(--light-green);
+    opacity: 0.8;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* ==== TÍTULOS E SEÇÕES ==== */
+.section-title {
+    color: var(--primary-green);
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--light-green), var(--accent-green));
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* ==== CARDS DE SERVIÇOS ==== */
+.service-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(45, 90, 39, 0.2);
+    border-color: var(--light-green);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--secondary-green);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.service-card h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* ==== ÍCONE DA SEÇÃO SOBRE ==== */
+.about-icon {
+    font-size: 12rem;
+    color: var(--accent-green);
+    opacity: 0.7;
+    animation: rotate 20s linear infinite;
+}
+
+/* ==== CARDS DE INFORMAÇÕES ==== */
+.info-card {
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-green);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover .info-icon {
+    /*color: var(--light-green);*/
+    transform: scale(1.1);
+}
+
+.info-card h5 {
+   color: var(--primary-green);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* ==== FORMULÁRIO DE CONTATO ==== */
+.contact-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.form-label {
+    /*color: var(--primary-green);*/
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border: 2px solid #e0e0e0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Placeholder personalizado */
+.form-control::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* ==== BOTÕES ==== */
+.btn-success {
+    background: linear-gradient(135deg, var(--secondary-green) 0%, var(--primary-green) 100%);
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(45, 90, 39, 0.3);
+}
+
+.btn-success:active {
+    transform: translateY(0);
+}
+
+/* Efeito de ondulação no botão */
+.btn-success::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+@keyframes slideDown {
+    from {
+    transform: translateY(-100%);
+    opacity: 0;
+    }
+    to {
+    transform: translateY(0);
+    opacity: 1;
+    }
+}
+
+/* ==== RESPONSIVIDADE ==== */
+@media (max-width: 768px) {
+    body {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
+
+    .ratoplaca-image {
+    max-width: 80%;
+    margin-top: 2rem;
+    }
+
+    .hero-icon {
+    font-size: 8rem;
+    }
+
+    .about-icon {
+    font-size: 6rem;
+    }
+
+    .section-title {
+    font-size: 2rem;
+    }
+
+    .service-card {
+    margin-bottom: 2rem;
+    }
+
+    .contact-form {
+    padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .ratoplaca-image {
+    max-width: 90%;
+    border-radius: 15px;
+    }
+
+    .hero-icon {
+    font-size: 6rem;
+    }
+
+    .about-icon {
+    font-size: 4rem;
+    }
+
+    .section-title {
+    font-size: 1.8rem;
+    }
+
+    .service-icon {
+    font-size: 2.5rem;
+    }
+
+    .info-icon {
+    font-size: 2rem;
+    }
+}
+
+/* ==== ANIMAÇÕES GERAIS ==== */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ==== CORREÇÃO DO RODAPÉ ==== */
+/* Garantir que as seções ocupem o espaço necessário */
+main, section {
+    flex: 1;
+}
+
+/* Garantir que o rodapé fique no final */
+footer {
+    margin-top: auto;
+}
+/* ==== MELHORIAS DE ACESSIBILIDADE ==== */
+.btn:focus,
+.form-control:focus {
+    outline: 2px solid var(--light-green);
+    outline-offset: 2px;
+}
