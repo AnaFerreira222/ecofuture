@@ -336,6 +336,46 @@ body {
     }
 }
 
+/* Estilo tela de cadastro concluído */
+.success-container {
+  min-height: calc(100vh - 150px); /* desconta header + footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.success-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.success-box h2 {
+  font-weight: bold;
+  color: #198754; /* verde bootstrap */
+}
+
+.success-box p {
+  margin-top: 10px;
+  color: #6c757d;
+}
+
+.success-box video {
+  width: 220px;
+  margin: 25px 0;
+}
+
+.success-box .loading-text {
+  font-style: italic;
+  color: #999;
+  font-size: 0.95rem;
+}
+
 /* ==== ANIMAÇÕES GERAIS ==== */
 .fade-in {
     animation: fadeIn 1s ease-in;
