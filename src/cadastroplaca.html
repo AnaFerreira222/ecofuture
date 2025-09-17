@@ -61,47 +61,43 @@
         <div class="col-lg-6"> <!-- largura centralizada -->
           <form id="contact-form" class="contact-form" novalidate>
             
-            <!-- Potência da placa -->
-  <div class="mb-3">
-    <label for="potencia" class="form-label">Potência da placa (Wp)</label>
-    <input type="number" class="form-control" id="potencia" name="potencia" placeholder="Ex: 450">
-  </div>
+           <!-- Modelo da placa -->
+<div class="mb-3">
+  <label for="modelo" class="form-label">Modelo da placa</label>
+  <input type="text" class="form-control" id="modelo" name="modelo" placeholder="Ex: Canadian 450W">
+</div>
 
-  <!-- Ano de instalação -->
-  <div class="mb-3">
-    <label for="ano" class="form-label">Ano de instalação</label>
-    <input type="number" class="form-control" id="ano" name="ano" placeholder="Ex: 2023">
-  </div>
+<!-- Potência total -->
+<div class="mb-3">
+  <label for="potencia_total" class="form-label">Potência Total (Wp)</label>
+  <input type="number" class="form-control" id="potencia_total" name="potencia_total" placeholder="Ex: 4500">
+</div>
 
-  <!-- Orientação -->
-  <div class="mb-3">
-    <label for="orientacao" class="form-label">Orientação da placa</label>
-    <select id="orientacao" name="orientacao" class="form-select">
-      <option value="">Selecione</option>
-      <option value="Norte">Norte</option>
-      <option value="Sul">Sul</option>
-      <option value="Leste">Leste</option>
-      <option value="Oeste">Oeste</option>
-    </select>
-  </div>
+<!-- Data de instalação -->
+<div class="mb-3">
+  <label for="data_instalacao" class="form-label">Data de Instalação</label>
+  <input type="date" class="form-control" id="data_instalacao" name="data_instalacao">
+</div>
 
-  <!-- Eficiência -->
-  <div class="mb-3">
-    <label for="eficiencia" class="form-label">Eficiência média da placa (%)</label>
-    <input type="number" class="form-control" id="eficiencia" name="eficiencia" step="0.1" placeholder="Ex: 18.5">
-  </div>
-  
-            <!-- Botão e links centralizados -->
-            <div class="text-center mt-4">
-                    <a href="monitora.html" class="btn btn-success btn-lg">
-                        <i class="me-2"></i>Concluir
-                    </a>
-                </br>
-            </br>
-                <a href="cadastroresi.html" class="link-secondary voltar">← Voltar</a>
-              </div>
-          </form>
-        </div>
+<!-- Status -->
+<div class="mb-3">
+  <label for="status" class="form-label">Status do sistema</label>
+  <select id="status" name="status" class="form-select">
+    <option value="">Selecione</option>
+    <option value="Ativo">Ativo</option>
+    <option value="Inativo">Inativo</option>
+    <option value="Manutenção">Manutenção</option>
+  </select>
+</div>
+
+<!-- Botão e links centralizados -->
+<div class="text-center mt-4">
+  <a href="monitora.html" class="btn btn-success btn-lg">
+    <i class="me-2"></i>Concluir
+  </a>
+  <br><br>
+  <a href="cadastroresi.html" class="link-secondary voltar">← Voltar</a>
+</div>
       </div>
     </div>
   </section>
