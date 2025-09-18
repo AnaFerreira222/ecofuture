@@ -60,15 +60,14 @@ body {
 }
 
 /* Imagem Ratoplaca na hero section */
+
 .ratoplaca-image {
-    max-width: 80%;
+    max-width: 70%;
     height: auto;
-    background: transparent;
-    border: none;
-    box-shadow: none;
+    display: block;
+    filter: drop-shadow(0 0 20px rgba(144, 238, 144, 0.3));
     animation: fadeInRight 1s ease-out;
     transition: all 0.3s ease;
-    filter: drop-shadow(0 0 20px rgba(144, 238, 144, 0.3));
 }
 
 .ratoplaca-image:hover {
@@ -277,68 +276,66 @@ body {
 /* ==== RESPONSIVIDADE ==== */
 @media (max-width: 768px) {
     body {
-    padding-top: 70px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
 
     .ratoplaca-image {
-    max-width: 80%;
-    margin-top: 2rem;
+        max-width: 80%;
+        margin-top: 2rem;
     }
 
     .hero-icon {
-    font-size: 8rem;
+        font-size: 8rem;
     }
 
     .about-icon {
-    font-size: 6rem;
+        font-size: 6rem;
     }
 
     .section-title {
-    font-size: 2rem;
+        font-size: 2rem;
     }
 
     .service-card {
-    margin-bottom: 2rem;
+        margin-bottom: 2rem;
     }
 
     .contact-form {
-    padding: 1.5rem;
+        padding: 1.5rem;
     }
 }
 
 @media (max-width: 576px) {
     .ratoplaca-image {
-    max-width: 90%;
-    border-radius: 15px;
+        max-width: 90%;
+        border-radius: 15px;
     }
 
     .hero-icon {
-    font-size: 6rem;
+        font-size: 6rem;
     }
 
     .about-icon {
-    font-size: 4rem;
+        font-size: 4rem;
     }
 
     .section-title {
-    font-size: 1.8rem;
+        font-size: 1.8rem;
     }
 
     .service-icon {
-    font-size: 2.5rem;
+        font-size: 2.5rem;
     }
 
     .info-icon {
-    font-size: 2rem;
+        font-size: 2rem;
     }
 }
 
 /* Estilo tela de cadastro concluído */
 .success-container {
-  min-height: calc(100vh - 150px); /* desconta header + footer */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -357,7 +354,7 @@ body {
 
 .success-box h2 {
   font-weight: bold;
-  color: #198754; /* verde bootstrap */
+  color: #198754; 
 }
 
 .success-box p {
