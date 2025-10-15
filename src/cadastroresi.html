@@ -35,13 +35,7 @@
                 <a class="nav-link" href="index.html">Início</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="sobre.html">Sobre Nós</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="serviços.html">Serviços</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
+                <a class="nav-link" href="cadastro.html">Voltar</a>
             </li>
         </ul>
     </div>
@@ -59,43 +53,61 @@
       </div>
   
       <div class="row justify-content-center">
-        <div class="col-lg-6"> <!-- largura centralizada -->
+        <div class="col-lg-8"> <!-- largura centralizada -->
           <form id="contact-form" class="contact-form" novalidate>
             
             <!-- CEP e Bairro lado a lado -->
             <div class="row">
               <div class="col-md-6 mb-3">
-                <label for="nome" class="form-label">CEP</label>
-                <input type="text" class="form-control" id="nome" name="nome">
+                <label for="CEP" class="form-label">CEP</label>
+                <input type="CEP" class="form-control" id="CEP" name="CEP" placeholder="00.000-000">
               </div>
               <div class="col-md-6 mb-3">
-                <label for="email" class="form-label">Bairro</label>
-                <input type="email" class="form-control" id="email" name="email">
+                <label for="logradouro" class="form-label">Logradouro</label>
+                <input type="logradouro" class="form-control" id="logradouro" name="logradouro" placeholder="Rua, Avenida, Travessia">
               </div>
             </div>
   
             <!-- Rua -->
             <div class="row">
               <div class="col-md-12 mb-3">
-                <label for="rua" class="form-label">Rua</label>
-                <input type="rua" class="form-control" id="rua" name="rua">
+                <label for="rua" class="form-label">Endereço</label>
+                <input type="rua" class="form-control" id="rua" name="rua" placeholder="Itacir das Rosas">
               </div>
-            
-              <div class="col-md-12 mb-3">
+
+            <!--Numero e Complemento-->
+            <div class="row">
+              <div class="col-md-6 mb-3">
                 <label for="num" class="form-label">Número</label>
-                <input type="num" class="form-control" id="num" name="num">
+                <input type="num" class="form-control" id="num" name="num" placeholder="581">
               </div>
+            <div class="col-md-6 mb-3">
+              <label for="complemento" class="form-label">Complemento</label>
+              <input type="complemento" class="form-control" id="complemento" name="complemento" placeholder="Apto, Bloco">
             </div>
+          </div>
+
+           <!-- Bairro e Região-->
+           <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="bairro" class="form-label">Bairro</label>
+              <input type="bairro" class="form-control" id="bairro" name="bairro" placeholder="Jardim dos Ypês">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="regiao" class="form-label">Região</label>
+              <input type="regiao" class="form-control" id="regiao" name="regiao" placeholder="Leste">
+            </div>
+          </div>
   
             <!-- Cidade e estado-->
             <div class="row">
               <div class="col-md-6 mb-3">
-                <label for="numero" class="form-label">Cidade</label>
-                <input type="numero" class="form-control" id="numero" name="numero">
+                <label for="cidade" class="form-label">Cidade</label>
+                <input type="cidade" class="form-control" id="cidade" name="cidade" placeholder="Campinas">
               </div>
               <div class="col-md-6 mb-3">
-                <label for="cidadeestado" class="form-label">Estado</label>
-                <input type="cidadeestado" class="form-control" id="cidadeestado" name="cidadeestado">
+                <label for="estado" class="form-label">Estado</label>
+                <input type="estado" class="form-control" id="estado" name="estado" placeholder="SP">
               </div>
             </div>
   

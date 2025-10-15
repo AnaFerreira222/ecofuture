@@ -17,6 +17,7 @@
     <!-- Cabeçalho com navegação -->
     <header class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
+      
     <!-- Logo da empresa -->
     <a class="navbar-brand fw-bold" href="index.html">
     <i class="fas fa-solar-panel me-2"></i>EcoFuture
@@ -32,12 +33,6 @@
         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
                 <a class="nav-link" href="index.html">Início</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="sobre.html">Sobre Nós</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="serviços.html">Serviços</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="login.html">Login</a>
@@ -58,26 +53,30 @@
       </div>
   
       <div class="row justify-content-center">
-        <div class="col-lg-6"> <!-- largura centralizada -->
+        <div class="col-lg-8"> <!-- largura centralizada -->
           <form id="contact-form" class="contact-form" novalidate>
             
             <!-- Nome e E-mail lado a lado -->
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="nome" class="form-label">Nome Completo</label>
-                <input type="text" class="form-control" id="nome" name="nome">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Maria da Silva Santos">
               </div>
               <div class="col-md-6 mb-3">
                 <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" name="email">
+                <input type="email" class="form-control" id="email" name="email" placeholder="maria333@gmail.com">
               </div>
             </div>
   
-            <!-- Telefone ocupa linha inteira -->
+            <!-- Telefone e Documento -->
             <div class="row">
-              <div class="col-md-12 mb-3">
-                <label for="telefone" class="form-label">Telefone</label>
+              <div class="col-md-6 mb-3">
+                <label for="telefone" class="form-label">Telefone de contato</label>
                 <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(00) 0000-0000">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="documento" class="form-label">Documento (CPF)</label>
+                <input type="doc" class="form-control" id="documento" name="documento" placeholder="000.000.000-00">
               </div>
             </div>
   

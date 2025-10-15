@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoFuture - Perfil do Usuário</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/header.css">
+</head>
+<body class="profile">
+
+  <!-- Header -->
+  <header class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fas fa-solar-panel me-2"></i>EcoFuture
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="monitora.html">Voltar</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo -->
+  <main class="container my-5">
+    <!-- Cabeçalho do Perfil -->
+    <section class="card p-4 mb-4 shadow-sm">
+      <div class="d-flex align-items-center gap-3 flex-wrap">
+        <img src="https://i.pravatar.cc/160?img=12" alt="Avatar" class="avatar">
+        <div class="me-auto">
+          <h4 class="mb-1">João Silva</h4>
+          <div class="text-muted small">joao.silva@email.com</div>
+          <span class="badge bg-success mt-2">Plano Pro • Ativo</span>
+        </div>
+        <div class="d-flex gap-2">
+          <a href="#" class="btn btn-outline-success"><i class="fa-solid fa-pen me-1"></i> Editar perfil</a>
+          <a href="index.html" class="btn btn-outline-danger"><i class="fa-solid fa-right-from-bracket me-1"></i> Sair</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dados da Instalação + Resumo energético -->
+    <section class="row g-3 mb-4">
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+          <h5 class="mb-3"><i class="fa-solid fa-house-chimney me-2"></i>Dados da instalação</h5>
+          <div class="mb-2"><strong>Local:</strong> Rua das Palmeiras, 100 — Curitiba/PR</div>
+          <div class="mb-2"><strong>Sistema:</strong> 6,5 kWp • 12 placas • 1 inversor</div>
+          <div class="mb-2"><strong>Instalação:</strong> 24/03/2024 • GreenTech Solar</div>
+          <div class="mb-0"><strong>Última manutenção:</strong> 10/07/2025</div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+          <h5 class="mb-3"><i class="fa-solid fa-gauge-high me-2"></i>Resumo energético</h5>
+          <div class="row g-3">
+            <div class="col-sm-4">
+              <div class="text-center">
+                <div class="metric-icon mb-1"><i class="fa-solid fa-bolt"></i></div>
+                <div class="text-muted small">Geração no mês</div>
+                <div class="fs-4 fw-semibold">312 kWh</div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="text-center">
+                <div class="metric-icon mb-1"><i class="fa-solid fa-coins"></i></div>
+                <div class="text-muted small">Economia</div>
+                <div class="fs-4 fw-semibold">R$ 243,90</div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="text-center">
+                <div class="metric-icon mb-1"><i class="fa-solid fa-leaf"></i></div>
+                <div class="text-muted small">CO₂ evitado</div>
+                <div class="fs-4 fw-semibold">185 kg</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preferências -->
+    <section class="card p-4 mb-4">
+      <h5 class="mb-3"><i class="fa-solid fa-sliders me-2"></i>Preferências</h5>
+      <form class="row g-3">
+        <div class="col-md-4">
+          <label class="form-label">Idioma</label>
+          <select class="form-select">
+            <option>Português (Brasil)</option>
+            <option>English</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Moeda</label>
+          <select class="form-select">
+            <option>R$ (BRL)</option>
+            <option>$ (USD)</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Unidade</label>
+          <select class="form-select">
+            <option>kWh</option>
+            <option>Wh</option>
+          </select>
+        </div>
+
+        <div class="col-12 mt-2">
+          <label class="form-label">Alertas e notificações</label>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="notif1" checked>
+                <label class="form-check-label" for="notif1">Queda de produção</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="notif2" checked>
+                <label class="form-check-label" for="notif2">Falha no inversor</label>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="row g-2">
+                <div class="col-sm-6">
+                  <label class="form-label small">Canal preferido</label>
+                  <select class="form-select">
+                    <option>E-mail</option>
+                    <option>SMS</option>
+                    <option>Push</option>
+                  </select>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label small">Horário do relatório</label>
+                  <input type="time" class="form-control" value="08:00">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button type="button" class="btn btn-success">
+            <i class="fa-solid fa-floppy-disk me-1"></i>Salvar preferências
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Segurança -->
+    <section class="card p-4 mb-4">
+      <h5 class="mb-3"><i class="fa-solid fa-shield-halved me-2"></i>Segurança</h5>
+
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+        <div>
+          <div class="fw-semibold">Autenticação em duas etapas (2FA)</div>
+          <small class="text-muted">Proteja sua conta com um app autenticador.</small>
+        </div>
+        <button class="btn btn-outline-success">
+          <i class="fa-solid fa-lock me-1"></i> Configurar 2FA
+        </button>
+      </div>
+
+      <hr>
+
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+        <div>
+          <div class="fw-semibold">Sessões ativas</div>
+          <small class="text-muted">Desconecte-se de outros dispositivos.</small>
+        </div>
+        <button class="btn btn-outline-danger">
+          <i class="fa-solid fa-power-off me-1"></i> Encerrar todas as sessões
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h5><i class="fas fa-solar-panel me-2"></i>EcoFuture</h5>
+          <p class="mb-0">Energia limpa para um futuro sustentável</p>
+        </div>
+        <div class="col-lg-6 text-lg-end">
+          <p class="mb-0">&copy; 2025 EcoFuture. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
