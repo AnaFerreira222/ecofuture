@@ -70,7 +70,4 @@
 
   form.addEventListener('submit', calcular);
   btnLimpar.addEventListener('click', limpar);
-
-  
 })();
-
