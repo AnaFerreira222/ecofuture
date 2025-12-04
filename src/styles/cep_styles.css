@@ -1,0 +1,64 @@
+/* Estilos para a busca de CEP */
+
+/* Loading no campo CEP */
+#CEP.loading {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwNzhmZiIgc3Ryb2tlLXdpZHRoPSIyIj4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJzdHJva2UtZGFzaGFycmF5IiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgdmFsdWVzPSIwIDUwOzUwIDAiLz4KICAgIDwvY2lyY2xlPgo8L3N2Zz4=');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px 20px;
+    padding-right: 40px;
+}
+
+/* Animação para campos preenchidos automaticamente */
+.campo-preenchido {
+    animation: preenchimentoSucesso 0.5s ease;
+}
+
+@keyframes preenchimentoSucesso {
+    0% {
+        background-color: #d4edda;
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        background-color: transparent;
+        transform: scale(1);
+    }
+}
+
+/* Mensagem de erro do CEP */
+.cep-erro {
+    font-size: 0.875rem;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para o campo CEP com foco */
+#CEP:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Indicador visual de campo obrigatório */
+.form-label::after {
+    content: " *";
+    color: #dc3545;
+}
+
+/* Campos desabilitados durante o loading */
+.loading + .form-control {
+    opacity: 0.6;
+    pointer-events: none;
+}

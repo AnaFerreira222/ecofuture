@@ -1,3 +1,5 @@
+
+
 /* ==== ESTILOS GERAIS ==== */
 
 /* Reset e configurações básicas */
@@ -313,13 +315,13 @@ body {
 
 @media (max-width: 991px) {
     .hero-section {
-    min-height: 80vh;
+        min-height: 80vh;
     }
     
     .ratoplaca-image {
-    max-width: 60%;
-    margin: 0 auto;
-    display: block !important;
+        max-width: 60%;
+        margin: 0 auto;
+        display: block !important;
     }
 }
 
@@ -422,25 +424,6 @@ main, section {
 footer {
     margin-top: auto;
 }
-
-/* ==== REMOÇÃO DE ESPAÇO EXTRA ANTES DO RODAPÉ ==== */
-section:last-of-type,
-.container:last-child,
-.row:last-child {
-  margin-bottom: 0 !important;
-}
-
-#simulador .alert:last-child,
-#simulador .card:last-child,
-#simulador .row:last-child {
-  margin-bottom: 0 !important;
-}
-
-footer {
-  margin-top: 0;
-  border-top: 0;
-}
-
 /* ==== MELHORIAS DE ACESSIBILIDADE ==== */
 .btn:focus,
 .form-control:focus {
@@ -448,48 +431,280 @@ footer {
     outline-offset: 2px;
 }
 
+.placa-info {
+  background-color: #35573b;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid #284436;
+  padding: 20px;
+  text-align: center;
+}
+
+.placa-info .modal-header {
+  border-bottom: none;
+  justify-content: center;
+}
+
+.placa-info .btn-close {
+  filter: invert(1);
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.info-box {
+  border: 1px solid #1f7043;
+  background-color: #2b8571;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
 .service-link {
+  text-decoration: none !important; /* remove o sublinhado */
+  color: inherit; /* mantém a cor do texto do h4 */
+}
+
+.service-link h4 {
   text-decoration: none;
-  color: inherit;
-  display: block;         /* garante que o link ocupe todo o card */
-}
-.service-link:focus {
-  outline: none;
+  color: #2c6e49; /* cor opcional para os títulos */
+  font-weight: 700;
 }
 
-/* ajustes leves específicos do perfil (mantém sua base de estilos) */
-    .profile .card { border-radius: 15px; }
-    /*.profile h5, .profile h6 { color: var(--primary-green); }*/
-    .profile .metric-icon { font-size: 1.75rem; color: var(--secondary-green); }
-    .profile .avatar {
-      width: 90px; height: 90px; object-fit: cover;
-      border-radius: 50%; border: 3px solid rgba(45,90,39,.15);
+.service-link:hover h4 {
+  color: #1e5034; /* muda a cor quando o mouse passa, opcional */
+}
+
+.modal-footer button {
+  min-width: 100px;
+}
+
+.btn-danger {
+  background-color: #c0392b;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #a93226;
+}
+
+.chart-container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+}
+
+.stats-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.stats-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.stats-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.stats-label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.geracao {
+    color: #4a7c59;
+}
+
+.consumo {
+    color: #c94c4c;
+}
+
+.saldo {
+    color: #f39c12;
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse-indicator 2s infinite;
+}
+
+@keyframes pulse-indicator {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.status-positive {
+    background-color: #4a7c59;
+}
+
+.status-negative {
+    background-color: #c94c4c;
+}
+
+/* ==== ESTILOS PARA TELA DE DESEMPENHO E IRRADIAÇÃO SOLAR ==== */
+
+/* Background com gradiente para página de desempenho */
+body.performance-page {
+    background: linear-gradient(135deg, #4a9972 0%, #2a8330 100%);
+}
+
+/* Section de desempenho - títulos brancos apenas nesta página */
+body.performance-page #servicos .section-title {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.performance-page #servicos .section-title::after {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+}
+
+body.performance-page #servicos .section-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Cards de indicadores de performance - apenas sobrescreve se necessário */
+body.performance-page .stats-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    height: 100%;
+}
+
+body.performance-page .stats-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Ícones específicos para métricas de desempenho */
+.stats-icon.irradiacao {
+    color: #ff9800;
+}
+
+.stats-icon.performance {
+    color: #2196f3;
+}
+
+.stats-icon.produtividade {
+    color: #4caf50;
+}
+
+/* Valores com cores específicas */
+.stats-value.irradiacao {
+    color: #ff9800;
+}
+
+.stats-value.performance {
+    color: #2196f3;
+}
+
+.stats-value.produtividade {
+    color: #4caf50;
+}
+
+/* Sublabel para informações adicionais */
+.stats-sublabel {
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* Container dos gráficos - específico para página de desempenho */
+body.performance-page .chart-container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+body.performance-page .chart-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Seletor de período (Dia, Mês, Ano) */
+.period-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.period-btn {
+    background: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    color: var(--secondary-green);
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.period-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.period-btn.active {
+    background: linear-gradient(135deg, var(--secondary-green) 0%, var(--primary-green) 100%);
+    color: white;
+}
+
+/* Responsividade para tela de desempenho */
+@media (max-width: 768px) {
+    body.performance-page #servicos .section-title {
+        font-size: 2rem;
     }
-    .profile .shortcut .btn { border-radius: 12px; }
 
-    /* força altura igual e centralização dos cards */
-.service-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;      /* centraliza verticalmente o conteúdo */
-  height: 220px;                /* altura fixa/consistente para todos */
+    body.performance-page .stats-icon {
+        font-size: 2rem;
+    }
+
+    .period-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    body.performance-page .chart-container {
+        padding: 20px;
+    }
 }
 
-.service-card .service-icon {
-  margin-bottom: 0.5rem;
-}
+@media (max-width: 576px) {
+    .period-selector {
+        gap: 10px;
+    }
 
-.service-card h4 {
-  margin-bottom: 0.5rem;
-}
-
-.service-card p {
-  margin: 0 auto;
-  max-width: 85%;
-}
-
-/* alternativa: se não quiser altura fixa, use min-height por linha */
-@media (min-width: 992px) {
-  /* para telas grandes, uma altura mínima confortável */
-  .service-card { min-height: 220px; }
+    .period-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
 }
